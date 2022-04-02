@@ -1,0 +1,18 @@
+
+PROMPT='%K{023}%F{154}・%D - %* %k%f $(git_super_status)
+%K{255}%F{232}     ($(arch)) %m %~%f%k %# '
+
+#VSCodeではワークスペースで開きたい 普段はdevで開きたい
+if [ $PWD = "/Users/$USER" ] ; then
+    cd /Users/$USER/dev
+fi
+
+#gcc
+export PATH="/usr/local/bin:$PATH"
+
+#自分用コマンド置き場
+export PATH="$PATH:$HOME/bin"
+
+#自分用エイリアス
+alias re="source ~/.zshrc"
+alias x86='arch -x86_64 /bin/zsh'
